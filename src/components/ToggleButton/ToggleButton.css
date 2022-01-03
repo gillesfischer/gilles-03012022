@@ -1,0 +1,14 @@
+.toggle-button {
+  height: 4rem;
+  color: white;
+  background-color: var(--button-color);
+  padding: 0.5rem 2rem;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  opacity: 0.8;
+}
+
+button:hover {
+  opacity: 1;
+}

@@ -1,0 +1,108 @@
+.mycontainer {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  /* gap: 3px; */
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 40px auto 60px;
+  grid-template-areas:
+    'h h h h h h h h h h h h'
+    'l l l l l l r r r r r r'
+    'f f f f f f f f f f f f';
+}
+
+.title {
+  position: absolute;
+  z-index: 1;
+  margin-top: 1rem;
+}
+
+.title2 {
+  display: none;
+}
+
+.myheader {
+  grid-area: h;
+  /* background-color: rgba(255, 255, 255, 0.1); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.left-orderbookchart {
+  position: relative;
+  grid-area: l;
+  /* background-color: rgba(255, 255, 255, 0.1); */
+}
+.right-orderbookchart {
+  position: relative;
+  grid-area: r;
+  /* background-color: rgba(255, 255, 255, 0.1); */
+}
+.myfooter {
+  grid-area: f;
+  /* background-color: rgba(255, 255, 255, 0.1); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-container {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+}
+
+.modal-container h1 {
+  margin-top: 15vh;
+  text-align: center;
+  font-size: 2rem;
+}
+.modal-container button {
+  margin-top: 5vh;
+  font-size: 1.5rem;
+  height: 4rem;
+  color: white;
+  background-color: var(--button-color);
+  padding: 0.5rem 2rem;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  opacity: 0.8;
+}
+.modal-container button:hover {
+  opacity: 1;
+}
+
+/* layout for mobile screen size */
+@media only screen and (max-width: 600px) {
+  .mycontainer {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    gap: 3px;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 40px auto 40px auto 60px;
+    grid-template-areas:
+      't t t t t t t t t t t t'
+      'r r r r r r r r r r r r'
+      'h h h h h h h h h h h h'
+      'l l l l l l l l l l l l'
+      'f f f f f f f f f f f f';
+  }
+
+  .title2 {
+    display: block;
+    grid-area: t;
+    z-index: 2;
+    /* background-color: rgba(255, 255, 255, 0.1); */
+    display: flex;
+    align-items: center;
+  }
+
+  .title {
+    display: none;
+  }
+}

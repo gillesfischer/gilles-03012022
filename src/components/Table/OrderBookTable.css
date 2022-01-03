@@ -1,0 +1,42 @@
+table,
+th,
+td {
+  text-align: center;
+}
+
+table {
+  width: 100%;
+  border-top: 2px solid var(--grey-color);
+  /* border-top: none; */
+}
+
+th {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--grey-color);
+  width: 5rem;
+}
+td {
+  font-size: 1.2rem;
+  font-weight: 400;
+  width: 5rem;
+}
+
+.price {
+  font-weight: 400;
+}
+
+tr.table-row > td {
+  padding-bottom: 0.5em;
+}
+tr.first-row > th {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+
+/* layout for mobile screen size */
+/* @media only screen and (max-width: 600px) {
+  table.bottom {
+    border-top: none;
+  }
+} */
